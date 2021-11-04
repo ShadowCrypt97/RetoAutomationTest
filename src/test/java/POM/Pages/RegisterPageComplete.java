@@ -2,6 +2,7 @@ package POM.Pages;
 
 import ExcelDataSetHandler.ReadExcelFile;
 import POM.Helper.BrowserFactory;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -129,7 +130,7 @@ public class RegisterPageComplete extends BrowserFactory {
     @CacheLookup
     WebElement register;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='center_column']/div/ol")
+    @FindBy(how = How.CSS, using = "div[class='alert alert-danger']>ol")
     @CacheLookup
     WebElement errorsCount;
 
@@ -248,8 +249,10 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public int numberOfRequiredFields(){
-        List<WebElement> numbererrors = errorsCount.findElements(By.tagName("il"));
-        return numbererrors.size();
+        Integer Count = 0;
+        int numbererrors = driver.findElements(By.cssSelector("div[class='alert alert-danger']>ol>li")).size();
+        return numbererrors;
+
     }
 
     public void registerButtonIsClickeable(){
@@ -263,8 +266,7 @@ public class RegisterPageComplete extends BrowserFactory {
         for (int i = 0; i< states.size();i++){
             count++;
         }
-        if(count != states.size()-1)
-            System.out.println("fallido - error");;
+        Assert.assertTrue("el conteo de la lista no coincide con el numero de los elementos de la lista",count.equals(states.size()));
         states.get(10).click();
     }
 

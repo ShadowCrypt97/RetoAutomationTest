@@ -6,6 +6,7 @@ import POM.Pages.RegisterPageForm;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
@@ -47,8 +48,7 @@ public class stepDefinition_registerPageFormComplete {
     @Then("^Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error$")
     public void comparo_el_numero_de_campos_marcados_como_obligatorios_con_el_que_nos_muestra_en_el_mensaje_de_error() throws Throwable {
         registerPageComplete.numberOfRequiredFieldsAreDisplayedOnErrorMessage();
-        if(registerPageComplete.numberOfRequiredFields()!=registerPageComplete.asteriskAreDisplayed())
-            System.out.println("error");
+        Assert.assertEquals(registerPageComplete.numberOfRequiredFields(),registerPageComplete.asteriskAreDisplayed());
     }
 
     @Then("^Completo los campos obligatorios$")
