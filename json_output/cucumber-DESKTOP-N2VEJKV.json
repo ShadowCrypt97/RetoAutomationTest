@@ -1,0 +1,82 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Validar que al completar los campos obligatorios me registra un usuario nuevo",
+        "description": "",
+        "id": "register-form-completing-required-fields;validar-que-al-completar-los-campos-obligatorios-me-registra-un-usuario-nuevo",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 227542600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "me arrojo los campos obligatorios en el mensaje de error",
+            "match": {
+              "location": "stepDefinition_registerPageFormComplete.me_arrojo_los_campos_obligatorios_en_el_mensaje_de_error()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 208037900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Valido que los campos requeridos se muestren",
+            "match": {
+              "location": "stepDefinition_registerPageFormComplete.valido_que_los_campos_requeridos_se_muestren()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 67143600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Completo los campos obligatorios",
+            "match": {
+              "location": "stepDefinition_registerPageFormComplete.completo_los_campos_obligatorios()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 965500,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat stepDefinition.stepDefinition_registerPageFormComplete.hago_clic_en_el_boton_de_registro(stepDefinition_registerPageFormComplete.java:68)\r\n\tat ✽.And Realizo clic en el boton de registro(C:/Users/MACC/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/Documentos/Proyectos Automatizacion pruebas/RetoAutomationTest/src/test/resources/features/registerPageCompleteRegister.feature:8)\r\n",
+              "status": "pending"
+            },
+            "line": 8,
+            "name": "Realizo clic en el boton de registro",
+            "match": {
+              "location": "stepDefinition_registerPageFormComplete.hago_clic_en_el_boton_de_registro()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Valido que el nombre registrado aparezca en el boton arriba superior derecha",
+            "match": {
+              "location": "stepDefinition_registerPageFormComplete.valido_que_el_nombre_registrado_aparezca_en_el_boton_arriba_superior_derecha()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Register Form completing required fields",
+    "description": "",
+    "id": "register-form-completing-required-fields",
+    "keyword": "Feature",
+    "uri": "C:/Users/MACC/OneDrive - ESCUELA COLOMBIANA DE INGENIERIA JULIO GARAVITO/Documentos/Proyectos Automatizacion pruebas/RetoAutomationTest/src/test/resources/features/registerPageCompleteRegister.feature"
+  }
+]

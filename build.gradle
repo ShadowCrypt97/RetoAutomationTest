@@ -1,0 +1,49 @@
+buildscript {
+    dependencies {
+        classpath "com.github.spacialcircumstances:gradle-cucumber-reporting:0.1.24"
+    }
+}
+
+plugins {
+    id 'java'
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.24"
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.spacialcircumstances.gradle-cucumber-reporting'
+
+group 'org.testingPage - Sergio Andres Gomez Roa'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+cucumberReports {
+    outputDir = file('html-reports/html')
+    buildId = '0'
+    reports = files('json_output/reports/cucumber-report.json', 'json_output/cucumber-json.json')
+}
+
+dependencies {
+    implementation 'tech.grasshopper:extentreports-cucumber6-adapter:2.1.0'
+    implementation 'io.cucumber:cucumber-java:6.8.1'
+    implementation 'org.apache.poi:poi:4.1.2'
+    implementation 'org.apache.poi:poi-ooxml:4.1.2'
+    implementation 'io.cucumber:cucumber-core:6.8.1'
+    implementation 'io.cucumber:gherkin:15.0.2'
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'junit:junit:4.12'
+    implementation 'com.aventstack:extentreports:5.0.4'
+    testImplementation 'io.cucumber:cucumber-picocontainer:6.8.1'
+    testImplementation 'io.cucumber:cucumber-junit:6.8.1'
+    testImplementation 'io.cucumber:cucumber-java8:6.8.1'
+    testImplementation 'io.cucumber:cucumber-junit:6.8.1'
+    testImplementation 'junit:junit:4.12'
+    testRuntimeOnly 'junit:junit:4.12'
+
+}
+
+test {
+    useJUnitPlatform()
+}

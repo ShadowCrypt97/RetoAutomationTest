@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.06033">
+    <testcase classname="Register Form completing required fields" name="Validar que al completar los campos obligatorios me registra un usuario nuevo" time="3.06033">
+        <system-out><![CDATA[Given me arrojo los campos obligatorios en el mensaje de error..............passed
+When Valido que los campos requeridos se muestren...........................passed
+Then Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error.passed
+Then Completo los campos obligatorios.......................................passed
+And Realizo clic en el boton de registro....................................passed
+And Valido que el nombre registrado aparezca en el boton arriba superior derecha.passed
+]]></system-out>
+    </testcase>
+</testsuite>
