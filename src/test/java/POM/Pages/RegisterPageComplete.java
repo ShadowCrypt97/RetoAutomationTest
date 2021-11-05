@@ -13,18 +13,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 public class RegisterPageComplete extends BrowserFactory {
 
     WebDriver driver;
-
+    Random randomclass = new Random();
     ReadExcelFile readExcelFile = new ReadExcelFile();
     String filepath = "TestFiles/usersDataset.xlsx";
-    Integer getLastRow = readExcelFile.lastRow(filepath, "Hoja1");
+    Integer getLastRowHoja2 = readExcelFile.lastRow(filepath, "Hoja2");
+    Integer getLastRow = readExcelFile.lastRow(filepath,"Hoja1");
+    String[] dataset = {"","","","","","","",""};
+
 
     public RegisterPageComplete(WebDriver driver) throws IOException {
         this.driver = driver;
     }
+    @FindBy(id="email_create")
+    @CacheLookup
+    WebElement username;
 
     @FindBy(how = How.ID, using = "uniform-id_gender1")
     @CacheLookup
@@ -33,6 +40,10 @@ public class RegisterPageComplete extends BrowserFactory {
     @FindBy(how = How.ID, using = "uniform-id_gender2")
     @CacheLookup
     WebElement titleMrs;
+
+    @FindBy(how = How.XPATH, using="//*[@id='create-account_form']/h3")
+    @CacheLookup
+    WebElement createAccountText;
 
     @FindBy(how = How.ID, using = "customer_firstname")
     @CacheLookup
@@ -134,6 +145,31 @@ public class RegisterPageComplete extends BrowserFactory {
     @CacheLookup
     WebElement errorsCount;
 
+    @FindBy(how = How.XPATH, using="//li[text()='You must register at least one phone number.']")
+    @CacheLookup
+    WebElement phoneIsRequired;
+
+    @FindBy(how = How.XPATH, using="//b[text()='lastname']")
+    WebElement lastnameIsRequired;
+
+    @FindBy(how = How.XPATH, using="//b[text()='firstname']")
+    WebElement firstnameIsRequired;
+
+    @FindBy(how = How.XPATH, using="(//li[text()=' is required.'])[3]")
+    WebElement passwdIsRequired;
+
+    @FindBy(how = How.XPATH, using="//b[text()='address1']")
+    WebElement addressIsRequired;
+
+    @FindBy(how = How.XPATH, using="//b[text()='city']")
+    WebElement cityIsRequired;
+
+    @FindBy(how = How.XPATH, using="//div[@id='center_column']/div[1]/ol[1]/li[7]")
+    WebElement postalCodeIsRequired;
+
+    @FindBy(how = How.XPATH, using="//li[text()='This country requires you to choose a State.']")
+    WebElement countryIsRequired;
+
     @FindBy(how = How.XPATH, using = "//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")
     @CacheLookup
     WebElement myCustomerAccount;
@@ -163,6 +199,50 @@ public class RegisterPageComplete extends BrowserFactory {
     private WebElement asterisk12;
     @FindBy(how = How.XPATH, using = "//p[@id='address_alias']//sup[1]")
     private WebElement asterisk13;
+
+    public String createRandomEmail(Integer i) {
+        String theAlphaNumericS;
+        StringBuilder builder;
+
+        theAlphaNumericS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "0123456789";
+
+        //create the StringBuffer
+        builder = new StringBuilder(i);
+
+        for (int m = 0; m < i; m++) {
+
+            // generate numeric
+            int myindex
+                    = (int)(theAlphaNumericS.length()
+                    * Math.random());
+
+            // add the characters
+            builder.append(theAlphaNumericS
+                    .charAt(myindex));
+        }
+
+        return builder.toString();
+    }
+    public String[] getDataset() throws IOException {
+        String randomMail = createRandomEmail(8) + "@testmail.com";
+        String nombre = readExcelFile.getCellValue(filepath,"Hoja2",randomclass.nextInt(getLastRowHoja2),randomclass.nextInt(1));
+        String apellido = readExcelFile.getCellValue(filepath,"Hoja2",randomclass.nextInt(getLastRowHoja2),2);
+        String passwd = randomclass.nextInt(99999-10000)+10000+"";
+        String randomNumber = randomclass.nextInt(  2000000000-1000000000) + 1000000000+"";
+        String address = readExcelFile.getCellValue(filepath,"Hoja2",randomclass.nextInt(getLastRowHoja2),3);
+        String city = readExcelFile.getCellValue(filepath,"Hoja2",randomclass.nextInt(getLastRowHoja2),4);
+        String postalCode = randomclass.nextInt(99000-10000)+10000+"";
+        dataset[0] = randomMail;
+        dataset[1] = nombre;
+        dataset[2] = apellido;
+        dataset[3] = passwd;
+        dataset[4] = randomNumber;
+        dataset[5] = address;
+        dataset[6] = city;
+        dataset[7] = postalCode;
+        return dataset;
+    }
 
     public void phoneMobileIsDisplayed() {
         wait.until(ExpectedConditions.visibilityOf(phonemobile));
@@ -280,5 +360,66 @@ public class RegisterPageComplete extends BrowserFactory {
         if(!completeNameExpected.equals(completeNameResult))
             System.out.print("mensaje de error");
     }
+    public void createAccountIsDisplayed() {
 
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(createAccountText));
+        if(!createAccountText.isDisplayed())
+            Assert.fail("El texto \"create account\" no se encuentra");
+    }
+
+    public void typeEmail(String inputText) {
+        username.clear();
+        username.sendKeys(inputText);
+    }
+
+    public void registerButtonIsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(register));
+        if(!register.isDisplayed())
+            Assert.fail("El botón Register no se encuentra");
+    }
+    public void registerButtonClick(){
+        register.click();
+    }
+    public void genderMaleButton() {
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(titleMr));
+        titleMr.click();
+    }
+
+    public void genderFemaleButton() {
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(titleMrs));
+        titleMrs.click();
+    }
+
+    public void phoneIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(phoneIsRequired));
+        phoneIsRequired.isDisplayed();
+    }
+    public void lastnameIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(lastnameIsRequired));
+        lastnameIsRequired.isDisplayed();
+    }
+    public void firstnameIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(firstnameIsRequired));
+        firstnameIsRequired.isDisplayed();
+    }
+    public void passwdIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(passwdIsRequired));
+        passwdIsRequired.isDisplayed();
+    }
+    public void addressIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(addressIsRequired));
+        addressIsRequired.isDisplayed();
+    }
+    public void cityIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(cityIsRequired));
+        cityIsRequired.isDisplayed();
+    }
+    public void postalCodeIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(postalCodeIsRequired));
+        postalCodeIsRequired.isDisplayed();
+    }
+    public void countryIsRequired_IsDisplayed(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(countryIsRequired));
+        countryIsRequired.isDisplayed();
+    }
 }

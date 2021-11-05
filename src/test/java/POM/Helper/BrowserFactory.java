@@ -14,7 +14,7 @@ public class BrowserFactory {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 
-	public static WebDriver startBrowser(String browserName, String url) {
+	public static WebDriver startBrowser(String browserName) {
 		if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "./Driver/geckodriver.exe");
 			driver = new FirefoxDriver();
@@ -28,8 +28,15 @@ public class BrowserFactory {
 		}
 
 		driver.manage().window().maximize();
-		driver.get(url);
+
 		return driver;
+	}
+	public static void closeBrowser(WebDriver driver) {
+		driver.close();
+	}
+
+	public static void abrirUrl(WebDriver driver, String url){
+		driver.get(url);
 	}
 
 	public WebDriverWait explicitWait(WebDriver driver,Integer durationOnSeconds){
