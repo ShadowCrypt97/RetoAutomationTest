@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">nov. 4, 2021 09:11:31 p. m.</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Home Page</p>
+            <p class="text-sm">
+              <span>21:11:32 p. m.</span> / <span>00:07:168</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Home Page</h5>
+<span class='badge badge-success'>11.04.2021 21:11:32</span>
+<span class='badge badge-danger'>11.04.2021 21:11:39</span>
+<span class='badge badge-default'>00:07:168</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validar que la pagina me permite registrar un usuario nuevo con el email</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_homePageRegister.abro_la_pagina_de_la_tienda_en_el_navegador()">
+                <span>Given abro la pagina de la tienda en el navegador</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_homePageRegister.el_boton_de_signIn_se_cargue_le_hago_clic()">
+                <span>When el boton de signIn se cargue le hago clic</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_homePageRegister.valido_que_me_redirige_a_la_pagina_de_autenticacion()">
+                <span>Then valido que me redirige a la pagina de autenticacion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_homePageRegister.valido_que_el_campo_de_ingresar_email_se_muestra()">
+                <span>And Valido que el campo de ingresar email se muestra</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Register Form completing required fields</p>
+            <p class="text-sm">
+              <span>21:11:39 p. m.</span> / <span>00:08:400</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Register Form completing required fields</h5>
+<span class='badge badge-success'>11.04.2021 21:11:39</span>
+<span class='badge badge-danger'>11.04.2021 21:11:48</span>
+<span class='badge badge-default'>00:08:400</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log fail-bg mr-2">Fail</span>Validar que al completar los campos obligatorios me registra un usuario nuevo</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.me_encuentro_en_la_pagina_create_account()">
+                <span>Given me encuentro en la pagina create account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.ingreso_un_email_nuevo()">
+                <span>When Ingreso un email nuevo</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.hago_clic_en_el_boton_crateAccount()">
+                <span>When Hago clic en el boton crateAccount</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.valido_que_el_boton_de_registro_se_muestre_correctamente()">
+                <span>Then Valido que el boton de registro se muestre correctamente</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.hago_clic_en_el_boton_radial_Mr_Mrs()">
+                <span>Then Hago clic en el boton radial Mr/Mrs</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.hago_clic_en_el_boton_de_registro()">
+                <span>Then Hago clic en el boton de registro</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.me_arroje_los_campos_obligatorios_en_el_mensaje_de_error()">
+                <span>When me arroje los campos obligatorios en el mensaje de error</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.valido_que_los_campos_requeridos_se_muestren()">
+                <span>Then Valido que los campos requeridos se muestren</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.comparo_el_numero_de_campos_marcados_como_obligatorios_con_el_que_nos_muestra_en_el_mensaje_de_error()">
+                <span>And Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected:<8> but was:<13>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinition.stepDefinition_registerPageFormComplete.comparo_el_numero_de_campos_marcados_como_obligatorios_con_el_que_nos_muestra_en_el_mensaje_de_error(stepDefinition_registerPageFormComplete.java:102)
+	at ✽.Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error(file:///C:/Users/MACC/OneDrive%20-%20ESCUELA%20COLOMBIANA%20DE%20INGENIERIA%20JULIO%20GARAVITO/Documentos/Proyectos%20Automatizacion%20pruebas/RetoAutomationTest/src/test/resources/features/registerPageCompleteRegister.feature:13)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.completo_los_campos_obligatorios()">
+                <span>And Completo los campos obligatorios</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.hago_clic_nuevamente_en_el_boton_de_registro()">
+                <span>And Hago clic nuevamente en el boton de registro</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_registerPageFormComplete.valido_que_el_nombre_registrado_aparezca_en_el_boton_arriba_superior_derecha()">
+                <span>And Valido que el nombre registrado aparezca en el boton arriba superior derecha</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:11:47 p. m.</td>
+<td>
+<a href="#" class="linked" test-id='9' id='20'>And Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error</a>
+<div class="">
+<span class="badge badge-default">Register Form completing required fields.Validar que al completar los campos obligatorios me registra un usuario nuevo.And Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>nov. 4, 2021 09:11:31 p. m.</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>nov. 4, 2021 09:11:48 p. m.</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='50%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'><b>1</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='50%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='75%'><b>12</b> steps passed</small></div>
+<div>
+<small data-tooltip='6%'><b>1</b> steps failed,
+<b>3</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Home Page":7.168,"Register Form completing required fields":8.4
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 1,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 12,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 3,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
