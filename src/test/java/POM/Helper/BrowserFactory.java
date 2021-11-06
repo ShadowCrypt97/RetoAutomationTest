@@ -1,9 +1,11 @@
 package POM.Helper;
 
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.DateFormat;
@@ -13,6 +15,8 @@ import java.util.Date;
 public class BrowserFactory {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
+	public static Actions actions;
+	public static SoftAssertions softAssertions;
 
 	public static WebDriver startBrowser(String browserName) {
 		if (browserName.equals("firefox")) {

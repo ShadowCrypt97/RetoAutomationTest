@@ -137,7 +137,7 @@ public class RegisterPageComplete extends BrowserFactory {
     @CacheLookup
     WebElement alias;
 
-    @FindBy(how = How.XPATH, using = "//span[text()='Register']")
+    @FindBy(how = How.XPATH, using = "//*[@id='submitAccount']")
     @CacheLookup
     WebElement register;
 
@@ -250,7 +250,7 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void phoneMobileSendKeys() throws IOException {
-        String phoneNumber = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 4);
+        String phoneNumber = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 4);
         phonemobile.sendKeys(phoneNumber);
     }
 
@@ -260,7 +260,7 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void lastNameSendKeys() throws IOException {
-        String lastName = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 2);
+        String lastName = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 2);
         lastname.sendKeys(lastName);
     }
 
@@ -270,7 +270,7 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void firstNameSendKeys() throws IOException {
-        String firsName = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 1);
+        String firsName = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 1);
         firstname.sendKeys(firsName);
     }
 
@@ -280,7 +280,8 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void passwdSendKeys() throws IOException {
-        String password = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 3);
+        String password = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 3);
+        System.out.println(password);
         passwd.sendKeys(password);
     }
 
@@ -290,7 +291,7 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void addressSendKeys() throws IOException {
-        String addr = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 5);
+        String addr = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 5);
         address.sendKeys(addr);
     }
 
@@ -300,7 +301,7 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void citySendKeys() throws IOException {
-        String cityStr = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 6);
+        String cityStr = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 6);
         city.sendKeys(cityStr);
     }
 
@@ -310,7 +311,7 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void zipCodeSendKeys() throws IOException {
-        String zipCode = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow, 7);
+        String zipCode = readExcelFile.getCellValue(filepath, "Hoja1", getLastRow+1, 7);
         postcode.sendKeys(zipCode);
     }
 
@@ -336,7 +337,6 @@ public class RegisterPageComplete extends BrowserFactory {
     }
 
     public void registerButtonIsClickeable(){
-        register.isDisplayed();
         register.click();
     }
 
@@ -378,7 +378,7 @@ public class RegisterPageComplete extends BrowserFactory {
             Assert.fail("El botón Register no se encuentra");
     }
     public void registerButtonClick(){
-        register.click();
+        explicitWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='submitAccount']"))).click();
     }
     public void genderMaleButton() {
         explicitWait(driver,15).until(ExpectedConditions.visibilityOf(titleMr));

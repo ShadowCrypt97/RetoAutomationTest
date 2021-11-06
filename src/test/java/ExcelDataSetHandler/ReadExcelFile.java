@@ -43,7 +43,6 @@ public class ReadExcelFile {
 			XSSFRow row = newSheet.getRow(i);
 			// En cada orw leemos las celdas
 			for (int j = 0; j < row.getLastCellNum(); j++) { // getLastCellNum() cantidad de celdas que tiene una fila
-				System.out.println(row.getCell(j).getStringCellValue() + "||");
 				if(row.getCell(j).getStringCellValue().equals(cadenaComparacion))
 					return j;
 			}

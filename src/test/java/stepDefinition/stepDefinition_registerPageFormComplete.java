@@ -9,6 +9,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
@@ -16,9 +18,11 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import static POM.Helper.BrowserFactory.driver;
+import static POM.Helper.BrowserFactory.softAssertions;
 
 public class stepDefinition_registerPageFormComplete {
     WriteExcelFile writeFile = new WriteExcelFile();
+    byte[] screenshot;
     String randomMail;
     BrowserFactory browserFactory = new BrowserFactory();
     RegisterPageComplete registerPageComplete = PageFactory.initElements(driver,RegisterPageComplete.class);
@@ -40,7 +44,8 @@ public class stepDefinition_registerPageFormComplete {
     @When("^Ingreso un email nuevo$")
     public void ingreso_un_email_nuevo() throws Throwable {
         writeFile.writeExcel(filepath,"Hoja1",registerPageComplete.getDataset());
-        randomMail = Arrays.stream(registerPageComplete.getDataset()).collect(Collectors.toList()).get(0);
+        int lastRow = readExcelFile.lastRow(filepath,"Hoja1");
+        randomMail = readExcelFile.getCellValue(filepath,"Hoja1",lastRow,0);
         registerPageComplete.typeEmail(randomMail);
     }
 
@@ -99,7 +104,9 @@ public class stepDefinition_registerPageFormComplete {
     @Then("^Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error$")
     public void comparo_el_numero_de_campos_marcados_como_obligatorios_con_el_que_nos_muestra_en_el_mensaje_de_error() throws Throwable {
         registerPageComplete.numberOfRequiredFieldsAreDisplayedOnErrorMessage();
-        Assert.assertEquals(registerPageComplete.numberOfRequiredFields(),registerPageComplete.asteriskAreDisplayed());
+        softAssertions.assertThat(registerPageComplete.numberOfRequiredFields()).as("Step: And Comparo el numero de campos marcados como obligatorios con el que nos muestra en el mensaje de error").isEqualTo(registerPageComplete.asteriskAreDisplayed());
+        if(softAssertions.errorsCollected().size()!=0)
+            screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
     @Then("^Completo los campos obligatorios$")
@@ -116,7 +123,7 @@ public class stepDefinition_registerPageFormComplete {
 
     @Then("^Hago clic nuevamente en el boton de registro$")
     public void hago_clic_nuevamente_en_el_boton_de_registro() throws Throwable {
-        registerPageComplete.registerButtonIsClickeable();
+        registerPageComplete.registerButtonClick();
     }
 
     @Then("^Valido que el nombre registrado aparezca en el boton arriba superior derecha$")
