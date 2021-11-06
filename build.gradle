@@ -38,7 +38,7 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-picocontainer:6.8.1'
     testImplementation 'io.cucumber:cucumber-junit:6.8.1'
     testImplementation 'io.cucumber:cucumber-java8:6.8.1'
-    testImplementation 'io.cucumber:cucumber-junit:6.8.1'
+    testImplementation 'org.assertj:assertj-core:3.21.0'
     testImplementation 'junit:junit:4.12'
     testRuntimeOnly 'junit:junit:4.12'
 

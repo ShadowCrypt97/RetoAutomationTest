@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">nov. 6, 2021 02:28:45 a. m.</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Realizar una compra de un producto</p>
+            <p class="text-sm">
+              <span>02:28:46 a. m.</span> / <span>00:25:715</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Realizar una compra de un producto</h5>
+<span class='badge badge-success'>11.06.2021 02:28:46</span>
+<span class='badge badge-danger'>11.06.2021 02:29:11</span>
+<span class='badge badge-default'>00:25:715</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Como usuario logueado quiero realizar la compra de un producto desde que entro a la página principal hasta validar el mensaje de compra exitosa.</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.en_el_navegador_abro_la_pagina_en_la_pagina_principal_del_index()">
+                <span>Given En el navegador abro la pagina en la pagina principal del index</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded1.png' src="../../Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.selecciono_la_categoria_dresses()">
+                <span>When selecciono la categoria Dresses</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded2.png' src="../../Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_me_encuentro_en_la_categoria_correspondiente()">
+                <span>Then Valido que me encuentro en la categoria correspondiente</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded3.png' src="../../Screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_add_to_cart_en_el_producto()">
+                <span>Then Hago clic en Add to Cart en el producto</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded4.png' src="../../Screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_se_muestre_el_mensaje_de_producto_added_succesfully()">
+                <span>And Valido que se muestre el mensaje de prodcuto added succesfully</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded5.png' src="../../Screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_continuar_comprando()">
+                <span>And Hago clic en el boton continuar comprando</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded6.png' src="../../Screenshots/embedded6.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.hago_mouseover_sobre_el_carrito_de_compras()">
+                <span>And Hago mouseover sobre el carrito de compras</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded7.png' src="../../Screenshots/embedded7.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_se_despliega_la_lista_con_los_productos_added()">
+                <span>And Valido que se despliega la lista con los productos added</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded8.png' src="../../Screenshots/embedded8.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_el_precio_total()">
+                <span>And Valido el precio total</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded9.png' src="../../Screenshots/embedded9.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_carrito()">
+                <span>And Hago clic en el carrito</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded10.png' src="../../Screenshots/embedded10.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_me_muestra_el_detalle_de_la_compra_en_la_seccion_summary()">
+                <span>And Valido que me muestra el detalle de la compra en la seccion summary</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded11.png' src="../../Screenshots/embedded11.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_el_boton_de_proceed_to_checkout_exista()">
+                <span>And Valido que el boton de proceed to checkout exista</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded12.png' src="../../Screenshots/embedded12.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_proceed_to_checkout()">
+                <span>And Hago clic en el boton proceed to checkout</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded13.png' src="../../Screenshots/embedded13.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_me_dirigio_a_la_seccion_sign_in()">
+                <span>And valido que me dirigio a la seccion sign in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded14.png' src="../../Screenshots/embedded14.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_el_campo_email_es_clickeable()">
+                <span>And Valido que el campo email es clickeable</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded15.png' src="../../Screenshots/embedded15.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_el_campo_password_es_clickeable()">
+                <span>And Valido que el campo password es clickeable</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded16.png' src="../../Screenshots/embedded16.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.ingreso_un_email_registrado()">
+                <span>And Ingreso un email registrado</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded17.png' src="../../Screenshots/embedded17.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.ingreso_un_password_registrado()">
+                <span>And Ingreso un password registrado</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded18.png' src="../../Screenshots/embedded18.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_de_sign_in()">
+                <span>And Hago clic en el boton de sign in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded19.png' src="../../Screenshots/embedded19.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step pass-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_me_dirigio_a_la_seccion_address()">
+                <span>And valido que me dirigio a la seccion address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded20.png' src="../../Screenshots/embedded20.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step fail-bg" title="stepDefinition.stepDefinition_buyFlow.valido_la_informacion_personal_alli_consignada()">
+                <span>And Valido la informacion personal alli consignada</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression ul[class='address item box']>li[class='address_firstname address_lastname'] because of the following error:
+TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: chrome=95.0.4638.69)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-N2VEJKV', ip: '192.168.240.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\MACC\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:65158}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8730bc670e616ee8a28bbdf96a7d5f11
+*** Element info: {Using=xpath, value=ul[class='address item box']>li[class='address_firstname address_lastname']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy35.getText(Unknown Source)
+	at POM.Pages.BuyFlowPage.addressSectionInformation(BuyFlowPage.java:311)
+	at stepDefinition.stepDefinition_buyFlow.valido_la_informacion_personal_alli_consignada(stepDefinition_buyFlow.java:121)
+	at ✽.Valido la informacion personal alli consignada(file:///C:/Users/MACC/OneDrive%20-%20ESCUELA%20COLOMBIANA%20DE%20INGENIERIA%20JULIO%20GARAVITO/Documentos/Proyectos%20Automatizacion%20pruebas/RetoAutomationTest/src/test/resources/features/buyFlow.feature:25)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" >
+                <span>stepDefinition.ServiceHooks.addScreenshot(io.cucumber.java.Scenario)</span>
+      <div>
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../../Screenshots/embedded21.png' src="../../Screenshots/embedded21.png">
+    
+    </div></div>
+</div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_para_continuar()">
+                <span>And Hago clic en el boton para continuar</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_estoy_en_la_seccion_de_shipping()">
+                <span>And Valido que estoy en la seccion de shipping</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.marco_la_casilla_de_verificacion()">
+                <span>And marco la casilla de verificacion</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_para_continuar_la_transaccion()">
+                <span>And Hago clic en el boton para continuar la transaccion</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_me_encuentro_en_la_seccion_de_payment()">
+                <span>And valido que me encuentro en la seccion de payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_pay_by_bank_wire()">
+                <span>And hago clic en el boton pay by bank wire</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_el_mensaje_mostrado_que_corresponda_con_el_metodo_de_pago_pay_by_bank_wire()">
+                <span>And valido el mensaje mostrado que corresponda con el metodo de pago pay by bank wire</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_other_payment_methods()">
+                <span>And Hago clic en el boton Other payment methods</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_pay_by_check()">
+                <span>And hago clic en el boton pay by check</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_el_mensaje_mostrado_que_corresponda_con_el_metodo_de_pago_pay_by_check()">
+                <span>And valido el mensaje mostrado que corresponda con el metodo de pago pay by check</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_i_confirm_my_order()">
+                <span>And Hago clic en el boton I confirm my order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_que_el_mensaje_de_transaccion_exitosa_se_muestra()">
+                <span>And valido que el mensaje de transaccion exitosa se muestra</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_back_to_my_orders()">
+                <span>And hago clic en el boton back to my orders</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_la_fecha_de_la_transaccion_y_el_order_reference()">
+                <span>And valido la fecha de la transaccion y el order reference</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.hago_clic_en_el_boton_deails()">
+                <span>And Hago clic en el boton deails</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinition.stepDefinition_buyFlow.valido_la_informacion_de_la_compra_realizada()">
+                <span>And valido la informacion de la compra realizada</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>stepDefinition.ServiceHooks.afterScenario()</span>
+      <div>
+        <textarea disabled class="code-block">org.assertj.core.api.SoftAssertionError: 
+The following assertion failed:
+1) [Step: And Valido que se despliega la lista con los productos added] expected:<"Printed Dr[ess]"> but was:<"Printed Dr[...]">
+
+	at org.assertj.core.error.AssertionErrorCreator.multipleSoftAssertionsError(AssertionErrorCreator.java:100)
+	at org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)
+	at org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)
+	at stepDefinition.ServiceHooks.afterScenario(ServiceHooks.java:39)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.assertj.core.api.SoftAssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.assertj.core.api.SoftAssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:29:07 a. m.</td>
+<td>
+<a href="#" class="linked" test-id='1' id='78'>stepDefinition.ServiceHooks.afterScenario()</a>
+<div class="">
+<span class="badge badge-default">Realizar una compra de un producto.Como usuario logueado quiero realizar la compra de un producto desde que entro a la página principal hasta validar el mensaje de compra exitosa..stepDefinition.ServiceHooks.afterScenario()</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.InvalidSelectorException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.InvalidSelectorException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:29:07 a. m.</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>And Valido la informacion personal alli consignada</a>
+<div class="">
+<span class="badge badge-default">Realizar una compra de un producto.Como usuario logueado quiero realizar la compra de un producto desde que entro a la página principal hasta validar el mensaje de compra exitosa..And Valido la informacion personal alli consignada</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>nov. 6, 2021 02:28:45 a. m.</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>nov. 6, 2021 02:29:11 a. m.</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='100%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='69%'><b>41</b> steps passed</small></div>
+<div>
+<small data-tooltip='3%'><b>2</b> steps failed,
+<b>16</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Realizar una compra de un producto":25.715
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 41,
+failGrandChild: 2,
+warningGrandChild: 0,
+skipGrandChild: 16,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
