@@ -35,7 +35,7 @@ public class ServiceHooks{
     @After
     public void afterScenario(){
         System.out.println("Cerrar navegador");
-        BrowserFactory.closeBrowser(driver);
+        //BrowserFactory.closeBrowser(driver);
         softAssertions.assertAll();
     }
 

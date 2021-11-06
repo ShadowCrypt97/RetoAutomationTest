@@ -49,7 +49,7 @@ public class BrowserFactory {
 	}
 
 	public String getDate() {
-		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yy");
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 		Date date = new Date();
 		return dateFormat.format(date);
 	}

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import stepDefinition.ServiceHooks;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.function.Consumer;
 
 import static POM.Helper.BrowserFactory.driver;
@@ -27,6 +28,7 @@ public class BuyFlowPage extends BrowserFactory {
     Integer randomrow;
     String filepath = "TestFiles/usersDataset.xlsx";
     Integer getLastRow = readFile.lastRow(filepath, "Hoja1");
+    String orderReference;
 
     Consumer<By> hover = (By by) -> {
         actions.moveToElement(driver.findElement(by))
@@ -131,12 +133,6 @@ public class BuyFlowPage extends BrowserFactory {
     WebElement proceedToCheckoutShipping;
     @FindBy(how = How.XPATH, using = "//span[text()=' Shipping']")
     WebElement shipping;
-    @FindBy(how = How.CLASS_NAME, using = "fancybox-error")
-    WebElement youMustAgree;
-    @FindBy(how = How.XPATH, using = "//a[@class='fancybox-item fancybox-close']")
-    WebElement close;
-    @FindBy(how = How.LINK_TEXT, using = "Printed Summer Dress")
-    WebElement printedSummerDress;
     @FindBy(how = How.XPATH, using = "(//p[@class='product-name']//a)[2]")
     WebElement printedDress;
     @FindBy(how = How.ID, using = "total_price")
@@ -165,6 +161,8 @@ public class BuyFlowPage extends BrowserFactory {
     WebElement otherPaymentMethods;
     @FindBy(how = How.XPATH, using = "//p[@class='alert alert-success']")
     WebElement yourOrderOn;
+    @FindBy(how=How.XPATH,using = "//*[@id='center_column']/div")
+    WebElement textWithOrderReference;
     @FindBy(how = How.XPATH, using = "//div[@class='box order-confirmation']")
     WebElement yourCheckMust;
     @FindBy(how = How.XPATH, using = "//a[contains(@class,'button-exclusive btn')]")
@@ -173,9 +171,11 @@ public class BuyFlowPage extends BrowserFactory {
     WebElement historyDate;
     @FindBy(how = How.XPATH, using = "//td[contains(@class,'history_link bold')]")
     WebElement transactionID;
-    @FindBy(how = How.XPATH, using = "//td[@class='history_method']")
-    WebElement paymentByCheck;
-    @FindBy(how = How.XPATH, using = "//span[text()[normalize-space()='Details']]")
+    @FindBy(how = How.XPATH, using = "//*[@id='submitReorder']/p/strong")
+    WebElement informationDetailsOrder_Date;
+    @FindBy(how = How.XPATH, using = "//*[@id='order-detail-content']/table/tfoot/tr[4]/td[2]/span")
+    WebElement totalPriceDetails;
+    @FindBy(how = How.XPATH, using = "//*[@id='order-list']/tbody/tr[1]/td[7]/a[1]")
     WebElement details;
     @FindBy(how = How.XPATH, using = "//span[text()=' Home']")
     WebElement home;
@@ -370,4 +370,66 @@ public class BuyFlowPage extends BrowserFactory {
         explicitWait(driver,15).until(ExpectedConditions.elementToBeClickable(proceedToCheckoutShipping));
         proceedToCheckoutShipping.click();
     }
+    public void paymentIsDisplayed(){
+        String Payment = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(payment)).getText();
+        Assert.assertEquals("05. Payment",Payment);
+    }
+    public void payByBankWireClick(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(payByBank));
+        payByBank.click();
+    }
+    public void payByBankWireMessageIsDisplayed(){
+        String payBankWireMessage = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(youHaveChosenBankWire)).getText();
+        Assert.assertEquals("You have chosen to pay by bank wire. Here is a short summary of your order:",payBankWireMessage);
+    }
+    public void otherPaymentMethodsClick(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(otherPaymentMethods));
+        otherPaymentMethods.click();
+    }
+    public void payByCheckClick(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(payByCheck));
+        payByCheck.click();
+    }
+    public void payByCheckMessageIsDisplayed(){
+        String payByCheckMessage = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(youHaveChosenCheck)).getText();
+        Assert.assertEquals("You have chosen to pay by check. Here is a short summary of your order:",payByCheckMessage);
+    }
+    public void confirmMyOrderClick(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(iConfirmMy));
+        iConfirmMy.click();
+    }
+    public void successPaymentMessage(){
+        String successMessage = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(yourOrderOn)).getText();
+        Assert.assertEquals("Your order on My Store is complete.",successMessage);
+        orderReference = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(textWithOrderReference)).getText();
+        Integer indexOR = orderReference.indexOf("order reference");
+        orderReference = orderReference.substring(indexOR+16, 155);
+        System.out.println(orderReference);
+    }
+    public void backToMyOrders(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(backToOrders));
+        backToOrders.click();
+    }
+    public void orderReference_DateOrder(){
+        String actualDate = getDate();
+        String historyDateText = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(historyDate)).getText();
+        Assert.assertEquals(actualDate,historyDateText);
+        String transactionIDText = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(transactionID)).getText();
+        Assert.assertEquals(orderReference,transactionIDText);
+    }
+    public void detailsButtonClick(){
+        explicitWait(driver,15).until(ExpectedConditions.visibilityOf(details));
+        softAssertions.assertThat(ExpectedConditions.elementToBeClickable(details)).as("And Hago clic en el boton deails").isEqualTo(true);
+        details.click();
+    }
+    public void detailInformation(){
+        String actualDate = getDate();
+        String detailsText = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(informationDetailsOrder_Date)).getText();
+        String totalPrice = explicitWait(driver,15).until(ExpectedConditions.visibilityOf(totalPriceDetails)).getText();
+        softAssertions.assertThat(detailsText).as("And valido la informacion de la compra realizada").contains(actualDate);
+        softAssertions.assertThat(detailsText).as("And valido la informacion de la compra realizada").contains(orderReference);
+        softAssertions.assertThat(totalPrice).as("And valido la informacion de la compra realizada").isEqualTo("$28.00");
+
+    }
+
 }

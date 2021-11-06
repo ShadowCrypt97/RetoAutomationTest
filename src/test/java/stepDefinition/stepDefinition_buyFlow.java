@@ -143,74 +143,62 @@ public class stepDefinition_buyFlow {
 
     @Then("valido que me encuentro en la seccion de payment")
     public void valido_que_me_encuentro_en_la_seccion_de_payment() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.paymentIsDisplayed();
     }
 
     @Then("hago clic en el boton pay by bank wire")
     public void hago_clic_en_el_boton_pay_by_bank_wire() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.payByBankWireClick();
     }
 
     @Then("valido el mensaje mostrado que corresponda con el metodo de pago pay by bank wire")
     public void valido_el_mensaje_mostrado_que_corresponda_con_el_metodo_de_pago_pay_by_bank_wire() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.payByBankWireMessageIsDisplayed();
     }
 
     @Then("Hago clic en el boton Other payment methods")
     public void hago_clic_en_el_boton_other_payment_methods() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.otherPaymentMethodsClick();
     }
 
     @Then("hago clic en el boton pay by check")
     public void hago_clic_en_el_boton_pay_by_check() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.payByCheckClick();
     }
 
     @Then("valido el mensaje mostrado que corresponda con el metodo de pago pay by check")
     public void valido_el_mensaje_mostrado_que_corresponda_con_el_metodo_de_pago_pay_by_check() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.payByCheckMessageIsDisplayed();
     }
 
     @Then("Hago clic en el boton I confirm my order")
     public void hago_clic_en_el_boton_i_confirm_my_order() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.confirmMyOrderClick();
     }
 
     @Then("valido que el mensaje de transaccion exitosa se muestra")
     public void valido_que_el_mensaje_de_transaccion_exitosa_se_muestra() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.successPaymentMessage();
     }
 
     @Then("hago clic en el boton back to my orders")
     public void hago_clic_en_el_boton_back_to_my_orders() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.backToMyOrders();
     }
 
     @Then("valido la fecha de la transaccion y el order reference")
     public void valido_la_fecha_de_la_transaccion_y_el_order_reference() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.orderReference_DateOrder();
     }
 
     @Then("Hago clic en el boton deails")
     public void hago_clic_en_el_boton_deails() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.detailsButtonClick();
     }
 
 
     @Then("valido la informacion de la compra realizada")
     public void valido_la_informacion_de_la_compra_realizada() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        buyFlowPage.detailInformation();
     }
 }
